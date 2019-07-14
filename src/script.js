@@ -25,7 +25,7 @@ ajaxRequest('/la-data/E09000012', function() {
     ajaxRequest('/postcodes/' + postcodes.join('|'), function() {
       const postcodeData = JSON.parse(this.responseText).result;
       data['rows'].forEach(row => {
-        const matchingRow = postcodeData.find(p => p.result['postcode'] === row['postcode']);
+        const matchingRow = postcodeData.find(p => p.result['postcode'] === row['postcode']).result;
         row['latitude'] = matchingRow['latitude'];
         row['longitude'] = matchingRow['longitude'];
       })
