@@ -7,6 +7,8 @@ A simple demonstration app which puts data from
 
 I've used a vanilla Javascript front-end with the mapping done with [Leaflet](https://leafletjs.com/) and [OpenStreetMap](https://www.openstreetmap.org/#map=6/54.910/-3.432) and a Python backend with Flask and the good old `requests` library.
 
+The EPC data doesn't come with any geocoding so after the server has retrieved the data from the UK government, it then makes a bulk request to the fantastic [postcodes.io](http://postcodes.io/). Unfortunately requesting somewhere busy, like a London borough, seems to overwhelm postcodes.io a bit, so I've limited the search results to 50. There is still scope to increase this, but it's low to make the thing fast for testing.
+
 ## Why separate client and server? Isn't that over-engineering?
 
 Not really. In the real world, you'd cache the EPC data on the server, rather than having every one of your clients request the data separately from the UK government.
