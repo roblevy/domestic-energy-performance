@@ -1,5 +1,7 @@
 # Domestic Energy Performance Certificate (EPC) mapping
 
+![screenshot](https://i.stack.imgur.com/hvvZx.png)
+
 A simple demonstration app which puts data from
 [the Ministry of Housing, Communities and Local Government](https://epc.opendatacommunities.org/docs/api/domestic) on a map.
 
